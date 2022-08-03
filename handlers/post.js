@@ -101,7 +101,8 @@ const getAllPosts = async(req, res) => {
     console.log('get all posts');
     try {
         const posts = await Post.find({$expr: { $lt: [0.5, {$rand: {} } ] }}).populate('user');
-        return res.status(200).send(posts);
+        console.log(posts);
+        return res.status(200).json(posts);
     } catch (err) {
         console.log({error:err})
         res.status(500).json(err);
