@@ -11,6 +11,6 @@ postRouter.get('/getAllPosts', getAllPosts);
 postRouter.get('/getPost/:postId', getPost);
 // postRouter.get('/getPostsByUser/:userId', getPostsByUser);
 postRouter.get('/getPostsByUser', getPostsByUser);
-postRouter.post('/createPostWithoutToken', createPostWithoutToken);
+// postRouter.post('/createPostWithoutToken', createPostWithoutToken);
 
 module.exports = {postRouter};
