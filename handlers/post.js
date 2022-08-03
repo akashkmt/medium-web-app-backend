@@ -98,10 +98,12 @@ const dislikePost = async(req, res) => {
 
 // get all posts
 const getAllPosts = async(req, res) => {
+    console.log('get all posts');
     try {
         const posts = await Post.find({$expr: { $lt: [0.5, {$rand: {} } ] }}).populate('user');
         return res.status(200).send(posts);
     } catch (err) {
+        console.log({error:err})
         res.status(500).json(err);
     }
 }
