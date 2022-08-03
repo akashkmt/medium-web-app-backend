@@ -6,7 +6,7 @@ const { postRouter } = require('./routes/post');
 const { userRouter } = require('./routes/user');
 
 const app = express();  
-const port = process.env.LOCAL_PORT || 8080;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
