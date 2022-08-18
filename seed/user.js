@@ -1,6 +1,6 @@
 const { faker } = require('@faker-js/faker');
 
-let database = 
+let database = []
 
   async function createUsersNew () {
     for(var i = 0; i <= database.length; i++){
